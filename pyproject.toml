@@ -8,8 +8,10 @@ authors = ["alfonso <@lfareiza1989>"]
 python = "^3.8"
 Django = "^3.2"
 gunicorn = "^20.1.0"
+flake8 = "^3.9.0"
 
 [tool.poetry.dev-dependencies]
+pytest-django = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
