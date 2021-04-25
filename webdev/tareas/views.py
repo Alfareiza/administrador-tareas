@@ -11,7 +11,7 @@ def home(request):
         form = TareaNuevaForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('home'))
+            return HttpResponseRedirect(reverse('tareas:home'))
         else:
             return render(request, 'tareas/home.html', {'form': form}, status=400)
 
