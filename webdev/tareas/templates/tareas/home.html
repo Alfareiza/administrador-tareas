@@ -50,16 +50,33 @@
     </div>
     <div class="col-md-8 offset-md-2 mt-5 mb-3">
         <!-- action define para donde voy a enviar los datos del form. -->
+        <h2 class="mt-5">Agregar Tarea</h2>
         <form action="{% url 'tareas:home' %}" method="post">
             {% csrf_token %}
-            <h2>Lista de Tareas</h2>
             <small class="form-text text-muted">{{ form.nombre.errors }}</small>
+            {% comment %}
+            Este formulario envía los al bd haciendo match entre el name del input (nombre) y el del
+            Model "Tarea" que también se llama nombre, haciendo ese insert en el bd.
+            {% endcomment %}
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Digite nombre de la tarea..."
                        aria-label="Digite nombre de la tarea..." aria-describedby="button-addon2" name="nombre">
                 <button type="submit" class="btn btn-primary" id="button-addon2">Guardar</button>
             </div>
         </form>
+        <h3 class="mt-5">Tareas Pendientes</h3>
+        {% for tarea in tareas_pendientes %}
+        {% comment %}
+        Recibe de la view el objeto tareas_pendientes que es un query consultado de la bd y lo imprime en
+        el formulario con su atributo nombre (tarea.nombre).
+        {% endcomment %}
+        <form>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">{{ tarea.nombre }}</label>
+            </div>
+        </form>
+        {% endfor %}
     </div>
 </div>
 </body>

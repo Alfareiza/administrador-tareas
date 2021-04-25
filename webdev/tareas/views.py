@@ -4,6 +4,7 @@ from django.urls import reverse
 
 # Create your views here.
 from webdev.tareas.forms import TareaNuevaForm
+from webdev.tareas.models import Tarea
 
 
 def home(request):
@@ -13,6 +14,9 @@ def home(request):
             form.save()
             return HttpResponseRedirect(reverse('tareas:home'))
         else:
-            return render(request, 'tareas/home.html', {'form': form}, status=400)
+            tareas_pendientes = Tarea.objects.filter(realizada=False).all()
+            return render(request, 'tareas/home.html', {'form': form, 'tareas_pendientes': tareas_pendientes},
+                          status=400)
 
-    return render(request, 'tareas/home.html')
+    tareas_pendientes = Tarea.objects.filter(realizada=False).all()
+    return render(request, 'tareas/home.html', {'tareas_pendientes': tareas_pendientes})
