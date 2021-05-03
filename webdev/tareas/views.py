@@ -29,8 +29,15 @@ def home(request):
 
 
 def detalle(request, tarea_id):
-    tarea = Tarea.objects.get(id=tarea_id)
-    form = TareaForm(request.POST, instance=tarea)
-    if form.is_valid():
-        form.save()
+    if request.method == 'POST':
+        tarea = Tarea.objects.get(id=tarea_id)
+        form = TareaForm(request.POST, instance=tarea)
+        if form.is_valid():
+            form.save()
+    return HttpResponseRedirect(reverse('tareas:home'))
+
+
+def eliminar(request, tarea_id):
+    if request.method == 'POST':
+        Tarea.objects.get(id=tarea_id).delete()
     return HttpResponseRedirect(reverse('tareas:home'))
