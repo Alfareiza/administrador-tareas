@@ -1,12 +1,23 @@
 ![](https://github.com/Alfareiza/django-pro/actions/workflows/main.yml/badge.svg)
+<h1 align="center" >
+    <img src="webdev/tareas/static/img/home.png">
+</h1>
+<h2 align="center" >
+    Aplicación en Django para Administrar Tareas! <br>
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Alfareiza/django-pro?style=social">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/Alfareiza?label=Follow%20me%20%3A%29&style=social">
+</h2>
 
-# Projeto em Django
-Esse projeto trata-se de gerenciar tarefas.
+<h1>⚈ Acerca de 'django-pro'</h1>
+Este proyecto consiste en administrar tareas y poderlas marcar como pendientes, realizadas y finalmente borrarlas. 
+
+Este repositorio ha sido realizado gracias al mini curso que [PythonPro](https://pythonpro.com.br/) dispuso por medio de su canal de youtube en Febrero del 2021. [Videos de Youtube](https://www.youtube.com/playlist?list=PLA05yVJtRWYRgtGyrdH4Bbf2gtbk6OtTu). Este es el [repositorio original](https://github.com/pythonpro/django-pro) realizado por Renzo Nuccitelli.
 
 ## Features do o Projeto
-- Integração com GithubActions.
+- Integración con GithubActions.
     - Uso de python 3.7, 3.8 e 3.9 
-    - Verificações através de flake8.
+    - Verificaciones através de flake8.
   
-- Comunicação com Banco de Dados SQLite3.
+- Comunicación local con Base de Dados SQLite3.
+- Comunicación en producción con Base de Dados PostgreSQL.  
 - Publicado en [Heroku](https://tasks-djangopro.herokuapp.com/).
