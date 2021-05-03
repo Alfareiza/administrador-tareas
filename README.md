@@ -9,4 +9,4 @@ Esse projeto trata-se de gerenciar tarefas.
     - Verificações através de flake8.
   
 - Comunicação com Banco de Dados SQLite3.
-- Publicado en [Heroku](https://tasks-djangopro.herokuapp.com/tareas/).
+- Publicado en [Heroku](https://tasks-djangopro.herokuapp.com/).
