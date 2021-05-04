@@ -8,7 +8,7 @@
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/Alfareiza?label=Follow%20me%20%3A%29&style=social">
 </h2>
 
-<h1>⚈ Acerca de 'django-pro'</h1>
+<h1>⚈ Acerca de 'Administrar Tareas'</h1>
 Este proyecto consiste en administrar tareas y poderlas marcar como pendientes, realizadas y finalmente borrarlas. 
 
 Este repositorio ha sido realizado gracias al mini curso que [PythonPro](https://pythonpro.com.br/) dispuso por medio de su canal de youtube en Febrero del 2021. [Videos de Youtube](https://www.youtube.com/playlist?list=PLA05yVJtRWYRgtGyrdH4Bbf2gtbk6OtTu). Este es el [repositorio original](https://github.com/pythonpro/django-pro) realizado por Renzo Nuccitelli.
