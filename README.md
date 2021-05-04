@@ -1,10 +1,10 @@
-![](https://github.com/Alfareiza/django-pro/actions/workflows/main.yml/badge.svg)
+![](https://github.com/Alfareiza/administrador-tareas/actions/workflows/main.yml/badge.svg)
 <h1 align="center" >
     <img src="webdev/tareas/static/img/home.png">
 </h1>
 <h2 align="center" >
     Aplicación en Django para Administrar Tareas! <br>
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Alfareiza/django-pro?style=social">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Alfareiza/administrador-tareas?style=social">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/Alfareiza?label=Follow%20me%20%3A%29&style=social">
 </h2>
 
