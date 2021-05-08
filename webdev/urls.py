@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 from webdev import settings
-from webdev.home_view import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
