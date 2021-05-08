@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from webdev import settings
 from webdev.home_view import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('webdev.tareas.urls')),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns.append(path('__debug__/', include(debug_toolbar.urls)))
