@@ -1,10 +1,15 @@
 import pytest
 from django.urls import reverse
-from pytest_django.asserts import assertContains
+from django.test import TestCase
+
+_test_case = TestCase()
+
+assert_contains = _test_case.assertContains
+assert_not_contains = _test_case.assertNotContains
 
 
 @pytest.fixture
-def respuesta(client):
+def respuesta(client, db):
     resp = client.get(reverse('tareas:home'))
     return resp
 
@@ -14,8 +19,8 @@ def test_status_code(respuesta):
 
 
 def test_formulario_presente(respuesta):
-    assertContains(respuesta, '<form')
+    assert_contains(respuesta, '<form')
 
 
 def test_button_guardar_presente(respuesta):
-    assertContains(respuesta, '<button type="submit')
+    assert_contains(respuesta, '<button type="submit')
